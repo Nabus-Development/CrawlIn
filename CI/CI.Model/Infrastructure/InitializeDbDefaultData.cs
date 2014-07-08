@@ -7,5 +7,8 @@ namespace CI.Model.Infrastructure
 {
     public class InitializeDbDefaultData
     {
+        public void CreateDefaultIndustryList()
+        {
+        }
     }
 }

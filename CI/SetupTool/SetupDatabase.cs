@@ -9,17 +9,13 @@ namespace SetupTool
 {
     public static class SetupDatabase
     {
-        public static void CreateDatabase(string connectionString)
+        public static void CreateDatabase()
         {
-            ApplicationSettingsFactory.InitializeApplicationSettingsFactory(new SetupToolConfigApplicationSettings(connectionString));
-
             PersistenceContext.CreateSchema();
         }
 
-        public static void UpdateDatabase(string connectionString)
+        public static void UpdateDatabase()
         {
-            ApplicationSettingsFactory.InitializeApplicationSettingsFactory(new SetupToolConfigApplicationSettings(connectionString));
-
             PersistenceContext.UpdateSchema();
         }
     }

@@ -15,7 +15,6 @@ namespace CI.Repository.SessionStorage
     public class PersistenceContext
     {
         private static Configuration _nhibernateConfiguration;
-
         private static ISessionFactory _sessionFactory;
 
         public static ISession GetCurrentSession()
@@ -70,7 +69,7 @@ namespace CI.Repository.SessionStorage
 
         private static void Init()
         {
-            string connectionString = ((IConnectionString) ApplicationSettingsFactory.GetApplicationSettings()).ConnectionString;
+            string connectionString = ApplicationSettingsFactory.GetApplicationSettings().ConnectionString;
 
             var databaseConfiguration = MsSqlConfiguration.MsSql2012.ConnectionString(connectionString);
 

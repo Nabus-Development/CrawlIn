@@ -1,8 +1,9 @@
-﻿using CI.Model.Infrastructure.Configuration;
+﻿using System.Configuration;
+using CI.Model.Infrastructure.Configuration;
 
 namespace SetupTool
 {
-    public class SetupToolConfigApplicationSettings : IApplicationSettings, IConnectionString
+    public class SetupToolConfigApplicationSettings : IApplicationSettings
     {
         private string _connectionString;
 
@@ -14,6 +15,11 @@ namespace SetupTool
         public string ConnectionString
         {
             get { return _connectionString; }
+        }
+    
+        public string  LinkedInUrlWithIndustryCodes
+        {
+            get { return ConfigurationManager.AppSettings["LinkedInUrlWithIndustryCodes"]; }
         }
     }
 }

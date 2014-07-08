@@ -43,8 +43,9 @@
   <ItemGroup>
     <Compile Include="Infrastructure\Configuration\ApplicationSettingsFactory.cs" />
     <Compile Include="Infrastructure\Configuration\IApplicationSettings.cs" />
-    <Compile Include="Infrastructure\Configuration\IConnectionString.cs" />
+    <Compile Include="Infrastructure\IndustryCodeRow.cs" />
     <Compile Include="Infrastructure\InitializeDbDefaultData.cs" />
+    <Compile Include="Infrastructure\LinkedInIndustryCodesScrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

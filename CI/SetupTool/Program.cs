@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CI.Model.Infrastructure.Configuration;
 
 namespace SetupTool
 {
@@ -46,6 +47,10 @@ namespace SetupTool
                 parameters.TryGetValue("create_database", out createDatabase);
                 parameters.TryGetValue("update_database", out updateDatabase);
 
+                // Inject configuration throw method
+                if (!String.IsNullOrEmpty(connectionString))
+                    ApplicationSettingsFactory.InitializeApplicationSettingsFactory(new SetupToolConfigApplicationSettings(connectionString));
+
                 // Try write connection string to config files
                 if (!String.IsNullOrEmpty(rootDirectory))
                 {
@@ -70,7 +75,7 @@ namespace SetupTool
                         {
                             Console.WriteLine("Creation database with the connection string:\n {0}", connectionString);
 
-                            SetupDatabase.CreateDatabase(connectionString);
+                            SetupDatabase.CreateDatabase();
 
                             Console.WriteLine("Database creation is finished.");
                         }
@@ -88,7 +93,7 @@ namespace SetupTool
                         {
                             Console.WriteLine("Updating database with the connection string:\n {0}", connectionString);
 
-                            SetupDatabase.UpdateDatabase(connectionString);
+                            SetupDatabase.UpdateDatabase();
 
                             Console.WriteLine("Database updating is finished.");
                         }
