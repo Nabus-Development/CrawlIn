@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace CI.Web
+namespace CI.Web.App_Start
 {
     public class FilterConfig
     {

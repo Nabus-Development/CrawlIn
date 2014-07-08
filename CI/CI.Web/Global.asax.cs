@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using CI.Model.Infrastructure.Configuration;
 using CI.Repository.SessionStorage;
+using CI.Web.App_Start;
 using StructureMap;
 
 namespace CI.Web

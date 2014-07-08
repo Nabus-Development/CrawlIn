@@ -49,6 +49,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetConnectionString.cs" />
     <Compile Include="SetupDatabase.cs" />
+    <Compile Include="SetupToolConfigApplicationSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CI.Model\CI.Model.csproj">
