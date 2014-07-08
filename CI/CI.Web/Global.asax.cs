@@ -26,8 +26,6 @@ namespace CI.Web
             BootStrapper.ConfigureDependencies();
 
             ApplicationSettingsFactory.InitializeApplicationSettingsFactory(ObjectFactory.GetInstance<IApplicationSettings>());
-
-            PersistenceContext.Initialize(ApplicationSettingsFactory.GetApplicationSettings().ConnectionString);
         }
     }
 }

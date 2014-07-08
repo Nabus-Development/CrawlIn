@@ -54,13 +54,18 @@
     <Compile Include="SessionStorage\HttpSessionStorageContainer.cs" />
     <Compile Include="SessionStorage\ISessionStorageContainer.cs" />
     <Compile Include="SessionStorage\PersistenceContext.cs" />
-    <Compile Include="SessionStorage\SessionStorageFactory.cs" />
+    <Compile Include="SessionStorage\SessionStorageContainerFactory.cs" />
     <Compile Include="SessionStorage\ThreadSessionStorageContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CI.Model\CI.Model.csproj">
+      <Project>{55686386-D10E-47E4-93A0-394EC1EFE14B}</Project>
+      <Name>CI.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

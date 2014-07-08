@@ -6,11 +6,11 @@ using System.Text;
 
 namespace CI.Model.Infrastructure.Configuration
 {
-    public class WebConfigApplicationSettings : IApplicationSettings
+    public class WebConfigApplicationSettings : IApplicationSettings, IConnectionString
     {
         public string ConnectionString
         {
-            get { return ConfigurationManager.AppSettings["CrawlInDatabaseConnectionString"]; }
+            get { return ConfigurationManager.ConnectionStrings["CrawlInDbConnectionString"].ConnectionString; }
         }
     }
 }

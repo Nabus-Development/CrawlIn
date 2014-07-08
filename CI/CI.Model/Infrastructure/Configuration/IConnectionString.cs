@@ -5,7 +5,8 @@ using System.Text;
 
 namespace CI.Model.Infrastructure.Configuration
 {
-    public interface IApplicationSettings
+    public interface IConnectionString
     {
+        string ConnectionString { get; }
     }
 }

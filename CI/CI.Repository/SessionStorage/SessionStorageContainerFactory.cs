@@ -6,7 +6,7 @@ using System.Web;
 
 namespace CI.Repository.SessionStorage
 {
-    public static class SessionStorageFactory
+    public static class SessionStorageContainerFactory
     {
         private static ISessionStorageContainer _nhSessionStorageContainer;
 

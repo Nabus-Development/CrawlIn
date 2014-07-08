@@ -43,7 +43,10 @@
   <ItemGroup>
     <Compile Include="Infrastructure\Configuration\ApplicationSettingsFactory.cs" />
     <Compile Include="Infrastructure\Configuration\IApplicationSettings.cs" />
+    <Compile Include="Infrastructure\Configuration\IConnectionString.cs" />
+    <Compile Include="Infrastructure\Configuration\SetupToolConfigApplicationSettings.cs" />
     <Compile Include="Infrastructure\Configuration\WebConfigApplicationSettings.cs" />
+    <Compile Include="Infrastructure\InitializeDbDefaultData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
