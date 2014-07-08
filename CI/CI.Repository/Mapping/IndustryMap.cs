@@ -12,7 +12,8 @@ namespace CI.Repository.Mapping
         public IndustryMap()
         {
             Id(i => i.Id);
-            Map(i => i.Code);
+            Map(i => i.Code).Unique();
+            References(i => i.Group).Not.Nullable().Column("IndustryGroupId");
             Map(i => i.Description);
         }
     }

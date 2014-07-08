@@ -15,7 +15,7 @@ namespace CI.Service
 
             NHibernateUnitOfWork unitOfWork = new NHibernateUnitOfWork();
             // DI for poors
-            IndustryService industryService = new IndustryService(new IndustryRepository(unitOfWork), unitOfWork);
+            IndustryService industryService = new IndustryService(new IndustryRepository(unitOfWork), new IndustryGroupRepository(unitOfWork), unitOfWork);
 
             industryService.CreateIndustries(createIndustriesRequest);
         }

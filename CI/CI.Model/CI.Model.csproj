@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="Industries\IIndustryRepository.cs" />
     <Compile Include="Industries\Industry.cs" />
+    <Compile Include="IndustryGroups\IIndustryGroupRepository.cs" />
+    <Compile Include="IndustryGroups\IndustryGroup.cs" />
     <Compile Include="Infrastructure\Configuration\ApplicationSettingsFactory.cs" />
     <Compile Include="Infrastructure\Configuration\IApplicationSettings.cs" />
     <Compile Include="Infrastructure\Domain\IAggregateRoot.cs" />

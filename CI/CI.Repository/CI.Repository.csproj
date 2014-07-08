@@ -50,9 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapping\IndustryGroupMap.cs" />
     <Compile Include="Mapping\IndustryMap.cs" />
     <Compile Include="NHibernateUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IndustryGroupRepository.cs" />
     <Compile Include="Repositories\IndustryRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="SessionStorage\HttpSessionStorageContainer.cs" />
