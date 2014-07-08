@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using CI.Model.Infrastructure.Configuration;
+using CI.Repository.SessionStorage;
+using StructureMap;
 
 namespace CI.Web
 {
@@ -19,6 +22,12 @@ namespace CI.Web
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            BootStrapper.ConfigureDependencies();
+
+            ApplicationSettingsFactory.InitializeApplicationSettingsFactory(ObjectFactory.GetInstance<IApplicationSettings>());
+
+            PersistenceContext.Initialize(ApplicationSettingsFactory.GetApplicationSettings().ConnectionString);
         }
     }
 }
