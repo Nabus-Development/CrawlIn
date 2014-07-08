@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -41,12 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Industries\IIndustryRepository.cs" />
+    <Compile Include="Industries\Industry.cs" />
     <Compile Include="Infrastructure\Configuration\ApplicationSettingsFactory.cs" />
     <Compile Include="Infrastructure\Configuration\IApplicationSettings.cs" />
+    <Compile Include="Infrastructure\Domain\IAggregateRoot.cs" />
+    <Compile Include="Infrastructure\Domain\IRepository.cs" />
     <Compile Include="Infrastructure\IndustryCodeRow.cs" />
     <Compile Include="Infrastructure\InitializeDbDefaultData.cs" />
     <Compile Include="Infrastructure\LinkedInIndustryCodesScrapper.cs" />
+    <Compile Include="Infrastructure\UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\UnitOfWork\IUnitOfWorkRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

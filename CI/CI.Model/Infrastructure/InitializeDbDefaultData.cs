@@ -7,8 +7,9 @@ namespace CI.Model.Infrastructure
 {
     public class InitializeDbDefaultData
     {
-        public void CreateDefaultIndustryList()
+        public void CreateIndustries()
         {
+            IEnumerable<IndustryCodeRow> industryCodeRows = LinkedInIndustryCodesScrapper.GetIndustryCodeRows();
         }
     }
 }
