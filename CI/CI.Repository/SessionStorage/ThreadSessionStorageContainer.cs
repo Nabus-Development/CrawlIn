@@ -32,7 +32,7 @@ namespace CI.Repository.SessionStorage
 
         private static string GetThreadName()
         {
-            return Thread.CurrentThread.Name;
+            return Thread.CurrentThread.ManagedThreadId.ToString();
         }
     }
 }

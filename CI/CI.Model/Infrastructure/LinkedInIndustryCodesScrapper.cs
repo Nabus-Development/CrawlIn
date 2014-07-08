@@ -25,23 +25,22 @@ namespace CI.Model.Infrastructure
 
             HtmlDocument htmlDocument = new HtmlDocument();
             htmlDocument.Load(stream);
-
-            HtmlNodeCollection tableRows = htmlDocument.DocumentNode
-                .SelectSingleNode("//table[contains(@class,'info')]")
-                .SelectSingleNode("//tbody")
-                .SelectNodes("//tr");
+            
+            HtmlNode table = htmlDocument.DocumentNode.SelectSingleNode("//table[contains(@class,'info')]");
+            HtmlNode tbody = table.SelectSingleNode("//tbody");
+            HtmlNodeCollection trs = tbody.ChildNodes;
 
             List<IndustryCodeRow> industryCodeRows = new List<IndustryCodeRow>();
 
-            foreach (HtmlNode tableRow in tableRows)
+            foreach (HtmlNode tr in trs)
             {
-                HtmlNodeCollection rowCells = tableRow.SelectNodes("//td");
+                HtmlNodeCollection trTags = tr.ChildNodes;
 
                 IndustryCodeRow industryCodeRow = new IndustryCodeRow
                 {
-                    Code = rowCells[0].InnerText,
-                    Group = rowCells[1].InnerText,
-                    Description = rowCells[2].InnerText
+                    Code = trTags[0].InnerText,
+                    Group = trTags[2].InnerText,
+                    Description = trTags[4].InnerText
                 };
 
                 industryCodeRows.Add(industryCodeRow);

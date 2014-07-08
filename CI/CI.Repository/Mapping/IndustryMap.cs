@@ -12,6 +12,7 @@ namespace CI.Repository.Mapping
         public IndustryMap()
         {
             Id(i => i.Id);
+            Map(i => i.Code);
             Map(i => i.Description);
         }
     }

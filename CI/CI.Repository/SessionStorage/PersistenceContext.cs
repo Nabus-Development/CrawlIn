@@ -75,7 +75,7 @@ namespace CI.Repository.SessionStorage
 
             _nhibernateConfiguration = Fluently.Configure()
                 .Database(databaseConfiguration)
-                .Mappings(m => m.FluentMappings.AddFromAssemblyOf<IApplicationSettings>())
+                .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly()))
                 .BuildConfiguration();
 
             // tell NHibernate to quote columns with reserved names like "Order"

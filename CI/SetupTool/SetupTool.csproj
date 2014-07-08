@@ -61,6 +61,10 @@
       <Project>{3EBE7029-9294-4643-8892-63ED43188E4C}</Project>
       <Name>CI.Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CI.Service\CI.Service.csproj">
+      <Project>{2CB4ED91-C53B-4C93-A8F1-A48D281168D3}</Project>
+      <Name>CI.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

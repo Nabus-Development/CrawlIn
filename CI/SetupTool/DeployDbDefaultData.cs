@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using CI.Model.Infrastructure;
+using CI.Service;
 
 namespace SetupTool
 {

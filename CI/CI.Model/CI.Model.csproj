@@ -51,7 +51,6 @@
     <Compile Include="Infrastructure\Domain\IAggregateRoot.cs" />
     <Compile Include="Infrastructure\Domain\IRepository.cs" />
     <Compile Include="Infrastructure\IndustryCodeRow.cs" />
-    <Compile Include="Infrastructure\InitializeDbDefaultData.cs" />
     <Compile Include="Infrastructure\LinkedInIndustryCodesScrapper.cs" />
     <Compile Include="Infrastructure\UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\UnitOfWork\IUnitOfWorkRepository.cs" />
