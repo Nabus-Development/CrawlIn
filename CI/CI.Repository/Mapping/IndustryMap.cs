@@ -13,7 +13,7 @@ namespace CI.Repository.Mapping
         {
             Id(i => i.Id);
             Map(i => i.Code).Unique();
-            References(i => i.Group).Not.Nullable().Column("IndustryGroupId");
+            References(i => i.Group).Not.Nullable().Column("IndustryGroup_Id");
             Map(i => i.Description);
         }
     }
