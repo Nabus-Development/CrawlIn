@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using CI.Model.Infrastructure;
+﻿using System.Collections.Generic;
+using CI.Service.Models;
 
 namespace CI.Service.Messaging
 {
     public class CreateIndustriesRequest
     {
-        public IEnumerable<IndustryCodeRow> IndustryCodeRows { get; set; }
+        public IEnumerable<IndustryCodeRowModel> IndustryCodeRowModels { get; set; }
     }
 }

@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.IO.Pipes;
-using System.Linq;
 using System.Net;
-using System.Text;
 using CI.Model.Infrastructure.Configuration;
+using CI.Service.Models;
 using HtmlAgilityPack;
 
-namespace CI.Model.Infrastructure
+namespace SetupTool
 {
     public static class LinkedInIndustryCodesScrapper
     {
-        public static IEnumerable<IndustryCodeRow> GetIndustryCodeRows()
+        public static IEnumerable<IndustryCodeRowModel> GetIndustryCodeRows()
         {
             string linkedInUrlWithIndustryCodes = ApplicationSettingsFactory.GetApplicationSettings().LinkedInUrlWithIndustryCodes;
 
@@ -30,13 +27,13 @@ namespace CI.Model.Infrastructure
             HtmlNode tbody = table.SelectSingleNode("//tbody");
             HtmlNodeCollection trs = tbody.ChildNodes;
 
-            List<IndustryCodeRow> industryCodeRows = new List<IndustryCodeRow>();
+            List<IndustryCodeRowModel> industryCodeRows = new List<IndustryCodeRowModel>();
 
             foreach (HtmlNode tr in trs)
             {
                 HtmlNodeCollection trTags = tr.ChildNodes;
 
-                IndustryCodeRow industryCodeRow = new IndustryCodeRow
+                IndustryCodeRowModel industryCodeRow = new IndustryCodeRowModel
                 {
                     Code = trTags[0].InnerText,
                     Group = trTags[2].InnerText,

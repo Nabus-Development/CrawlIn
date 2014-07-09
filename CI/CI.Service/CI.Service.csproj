@@ -40,9 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompanySizeService.cs" />
     <Compile Include="IndustryService.cs" />
-    <Compile Include="InitializeDbDefaultData.cs" />
+    <Compile Include="Messaging\CreateCompanySizesRequest.cs" />
     <Compile Include="Messaging\CreateIndustriesRequest.cs" />
+    <Compile Include="Models\CompanySizeModel.cs" />
+    <Compile Include="Models\IndustryCodeRowModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

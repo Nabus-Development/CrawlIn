@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using CI.Model.Industries;
+﻿using CI.Model.Industries;
 using CI.Model.Infrastructure.UnitOfWork;
 
 namespace CI.Repository.Repositories

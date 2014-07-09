@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using CI.Model.Industries;
 using CI.Model.IndustryGroups;
-using CI.Model.Infrastructure;
 using CI.Model.Infrastructure.UnitOfWork;
 using CI.Service.Messaging;
 
@@ -25,7 +21,7 @@ namespace CI.Service
 
         public void CreateIndustries(CreateIndustriesRequest createIndustriesRequest)
         {
-            var industryCodeRowsGroupedByIndustryGroup = createIndustriesRequest.IndustryCodeRows.GroupBy(r => r.Group);
+            var industryCodeRowsGroupedByIndustryGroup = createIndustriesRequest.IndustryCodeRowModels.GroupBy(r => r.Group);
 
             foreach (var group in industryCodeRowsGroupedByIndustryGroup)
             {

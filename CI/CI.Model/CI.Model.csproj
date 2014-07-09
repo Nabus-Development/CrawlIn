@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompanySize\CompanySize.cs" />
+    <Compile Include="CompanySize\ICompanySizeRepository.cs" />
     <Compile Include="Industries\IIndustryRepository.cs" />
     <Compile Include="Industries\Industry.cs" />
     <Compile Include="IndustryGroups\IIndustryGroupRepository.cs" />
@@ -52,8 +54,6 @@
     <Compile Include="Infrastructure\Configuration\IApplicationSettings.cs" />
     <Compile Include="Infrastructure\Domain\IAggregateRoot.cs" />
     <Compile Include="Infrastructure\Domain\IRepository.cs" />
-    <Compile Include="Infrastructure\IndustryCodeRow.cs" />
-    <Compile Include="Infrastructure\LinkedInIndustryCodesScrapper.cs" />
     <Compile Include="Infrastructure\UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\UnitOfWork\IUnitOfWorkRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

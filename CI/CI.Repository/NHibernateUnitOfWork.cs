@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using CI.Model.Infrastructure.Domain;
 using CI.Model.Infrastructure.UnitOfWork;
 using CI.Repository.SessionStorage;
