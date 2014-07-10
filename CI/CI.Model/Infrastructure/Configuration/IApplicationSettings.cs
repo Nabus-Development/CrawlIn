@@ -5,5 +5,6 @@ namespace CI.Model.Infrastructure.Configuration
     {
         string ConnectionString { get; }
         string LinkedInUrlWithIndustryCodes { get; }
+        string LinkedInUrlWithLocations { get; }
     }
 }

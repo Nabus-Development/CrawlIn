@@ -21,5 +21,10 @@ namespace SetupTool
         {
             get { return ConfigurationManager.AppSettings["LinkedInUrlWithIndustryCodes"]; }
         }
+
+        public string LinkedInUrlWithLocations
+        {
+            get { throw new System.NotImplementedException(); }
+        }
     }
 }

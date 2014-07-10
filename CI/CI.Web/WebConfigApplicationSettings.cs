@@ -15,5 +15,10 @@ namespace CI.Web
         {
             get { throw new NotImplementedException(); }
         }
+
+        public string LinkedInUrlWithLocations
+        {
+            get { return ConfigurationManager.AppSettings["LinkedInUrlWithLocations"]; }
+        }
     }
 }
