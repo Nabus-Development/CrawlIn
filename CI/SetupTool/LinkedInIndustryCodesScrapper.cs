@@ -13,15 +13,13 @@ namespace SetupTool
         {
             string linkedInUrlWithIndustryCodes = ApplicationSettingsFactory.GetApplicationSettings().LinkedInUrlWithIndustryCodes;
 
-            WebRequest httpWebRequest = WebRequest.Create(linkedInUrlWithIndustryCodes);
-            httpWebRequest.Method = "GET";
-
-            WebResponse webResponse = httpWebRequest.GetResponse();
-
-            Stream stream = webResponse.GetResponseStream();
+            WebRequest webRequest = WebRequest.Create(linkedInUrlWithIndustryCodes);
+            webRequest.Method = WebRequestMethods.Http.Get;
 
             HtmlDocument htmlDocument = new HtmlDocument();
-            htmlDocument.Load(stream);
+            using (WebResponse webResponse = webRequest.GetResponse())
+                using (Stream stream = webResponse.GetResponseStream())
+                    htmlDocument.Load(stream);
             
             HtmlNode table = htmlDocument.DocumentNode.SelectSingleNode("//table[contains(@class,'info')]");
             HtmlNode tbody = table.SelectSingleNode("//tbody");

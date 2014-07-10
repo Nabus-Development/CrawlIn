@@ -44,8 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompanySize\CompanySize.cs" />
-    <Compile Include="CompanySize\ICompanySizeRepository.cs" />
+    <Compile Include="CompanySizes\CompanySize.cs" />
+    <Compile Include="CompanySizes\ICompanySizeRepository.cs" />
     <Compile Include="Industries\IIndustryRepository.cs" />
     <Compile Include="Industries\Industry.cs" />
     <Compile Include="IndustryGroups\IIndustryGroupRepository.cs" />

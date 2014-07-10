@@ -1,4 +1,4 @@
-﻿using CI.Model.CompanySize;
+﻿using CI.Model.CompanySizes;
 using CI.Model.Infrastructure.UnitOfWork;
 
 namespace CI.Repository.Repositories

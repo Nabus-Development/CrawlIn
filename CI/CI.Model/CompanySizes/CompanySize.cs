@@ -1,6 +1,6 @@
 ﻿using CI.Model.Infrastructure.Domain;
 
-namespace CI.Model.CompanySize
+namespace CI.Model.CompanySizes
 {
     public class CompanySize : IAggregateRoot
     {

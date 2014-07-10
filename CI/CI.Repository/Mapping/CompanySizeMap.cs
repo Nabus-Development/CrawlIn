@@ -1,4 +1,4 @@
-﻿using CI.Model.CompanySize;
+﻿using CI.Model.CompanySizes;
 using FluentNHibernate.Mapping;
 
 namespace CI.Repository.Mapping
