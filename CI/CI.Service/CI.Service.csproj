@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="CompanySizeService.cs" />
     <Compile Include="IndustryService.cs" />
+    <Compile Include="Interfaces\ILocationService.cs" />
     <Compile Include="JsonLocation.cs" />
+    <Compile Include="JsonLocationListObject.cs" />
     <Compile Include="LocationService.cs" />
     <Compile Include="Mapping\JsonLocationExtensionMethods.cs" />
     <Compile Include="Messaging\CreateCompanySizesRequest.cs" />

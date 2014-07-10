@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Net;
+using CI.Service.Interfaces;
 using CI.Service.Mapping;
 using CI.Service.Messaging;
 using Newtonsoft.Json;
 
 namespace CI.Service
 {
-    public class LocationService
+    public class LocationService : ILocationService
     {
         private string _linkedInUrlWithLocations;
 
@@ -31,9 +31,9 @@ namespace CI.Service
                         using (StreamReader streamReader = new StreamReader(stream))
                             jsonLocationList = streamReader.ReadToEnd();
 
-            IEnumerable<JsonLocation> jsonLocations = JsonConvert.DeserializeObject<IEnumerable<JsonLocation>>(jsonLocationList);
+            JsonLocationListObject jsonLocationListObject = JsonConvert.DeserializeObject<JsonLocationListObject>(jsonLocationList);
 
-            getLocationsResponse.LocationViewModels = jsonLocations.ConvertToLocationViewModelList();
+            getLocationsResponse.LocationViewModels = jsonLocationListObject.ResultList.ConvertToLocationViewModelList();
 
             return getLocationsResponse;
         }
